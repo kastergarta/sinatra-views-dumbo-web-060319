@@ -14,15 +14,15 @@ describe 'App' do
   end
 
   describe 'GET /info' do 
-    it 'returns a 200 status code' do 
-      get '/info'
-      expect(last_response.status).to eq(200)
-    end
-
-    # it 'loads info.erb in the view' do 
+    # it 'returns a 200 status code' do 
     #   get '/info'
-    #   expect(last_response.body).to include("Info Page")
-    #   expect(last_response.body).to include("This is the info page:")
+    #   expect(last_response.status).to eq(200)
     # end
+
+    it 'loads info.erb in the view' do 
+      get '/info'
+      expect(last_response.body).to include("Info Page")
+      expect(last_response.body).to include("This is the info page:")
+    end
   end
 end
