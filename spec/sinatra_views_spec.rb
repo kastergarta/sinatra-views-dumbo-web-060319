@@ -19,10 +19,10 @@ describe 'App' do
       expect(last_response.status).to eq(200)
     end
 
-    it 'loads info.erb in the view' do 
-      get '/info'
-      expect(last_response.body).to include("Info Page")
-      expect(last_response.body).to include("This is the info page:")
-    end
+    # it 'loads info.erb in the view' do 
+    #   get '/info'
+    #   expect(last_response.body).to include("Info Page")
+    #   expect(last_response.body).to include("This is the info page:")
+    # end
   end
 end
